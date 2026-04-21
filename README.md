@@ -3,17 +3,17 @@
 A complete, secure, console-based Login Authentication System built with **Core Java**, **MySQL**, and **JDBC**.
 
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---------|-------------|
-| 🔑 User Registration | Register with username, email, and password |
-| 🔓 User Login | Authenticate with username and password |
-| 🔒 BCrypt Hashing | Industry-standard password hashing with automatic salting |
-| 🛡️ Account Lockout | Locks account after 3 consecutive failed login attempts |
-| ✅ Input Validation | Email format, password strength, username format validation |
-| 🚫 SQL Injection Prevention | All database queries use PreparedStatement |
-| 📝 Audit Logging | All authentication events logged to `logs/auth.log` |
+|  User Registration | Register with username, email, and password |
+|  User Login | Authenticate with username and password |
+|  BCrypt Hashing | Industry-standard password hashing with automatic salting |
+|  Account Lockout | Locks account after 3 consecutive failed login attempts |
+|  Input Validation | Email format, password strength, username format validation |
+|  SQL Injection Prevention | All database queries use PreparedStatement |
+|  Audit Logging | All authentication events logged to `logs/auth.log` |
 
 
 ### Registration
