@@ -1,0 +1,28 @@
+Apr 21, 2026 8:31:53 PM com.auth.util.AuthLogger logInfo
+INFO: [INFO] Application started.
+Apr 21, 2026 8:33:46 PM com.auth.util.AuthLogger logRegistration
+INFO: [REGISTRATION] New user registered: testuser
+Apr 21, 2026 8:35:13 PM com.auth.util.AuthLogger logLoginSuccess
+INFO: [LOGIN SUCCESS] User: testuser
+Apr 21, 2026 8:36:05 PM com.auth.util.AuthLogger logLoginFailed
+WARNING: [LOGIN FAILED] User: testuser | Failed attempts: 1
+Apr 21, 2026 8:36:41 PM com.auth.util.AuthLogger logLoginFailed
+WARNING: [LOGIN FAILED] User: testuser | Failed attempts: 2
+Apr 22, 2026 12:05:28 AM com.auth.util.AuthLogger logAccountLocked
+SEVERE: [ACCOUNT LOCKED] User: testuser — Account locked after 3 failed login attempts.
+Apr 22, 2026 12:06:09 AM com.auth.util.AuthLogger logSecurityWarning
+WARNING: [SECURITY] Locked account login attempt: testuser
+Apr 22, 2026 12:06:23 AM com.auth.util.AuthLogger logInfo
+INFO: [INFO] Application shut down.
+Apr 22, 2026 12:11:09 AM com.auth.util.AuthLogger logInfo
+INFO: [INFO] Application started.
+Apr 22, 2026 12:11:21 AM com.auth.util.AuthLogger logRegistration
+INFO: [REGISTRATION] New user registered: demoUser123
+Apr 22, 2026 12:11:33 AM com.auth.util.AuthLogger logLoginSuccess
+INFO: [LOGIN SUCCESS] User: demoUser123
+Apr 22, 2026 12:11:49 AM com.auth.util.AuthLogger logInfo
+INFO: [INFO] Application shut down.
+Apr 22, 2026 12:18:29 AM com.auth.util.AuthLogger logInfo
+INFO: [INFO] Application started.
+Apr 22, 2026 12:18:52 AM com.auth.util.AuthLogger logLoginFailed
+WARNING: [LOGIN FAILED] User: Aman | Failed attempts: 0

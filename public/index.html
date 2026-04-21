@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Auth System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <!-- Notification Area -->
+        <div id="notification" class="notification hidden">
+            <span id="notif-message"></span>
+            <button class="close-btn" onclick="closeNotification()">×</button>
+        </div>
+
+        <div class="form-container glass-panel">
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('login')">Login</button>
+                <button class="tab-btn" onclick="switchTab('register')">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form active-form" onsubmit="handleLogin(event)">
+                <h2>Welcome Back</h2>
+                <p class="subtitle">Enter your credentials to access your account</p>
+                
+                <div class="input-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" required placeholder="e.g. johndoe">
+                </div>
+                
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="login-password" required placeholder="••••••••">
+                        <button type="button" class="toggle-password" onclick="togglePassword('login-password')">Show</button>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="login-btn">
+                    <span class="btn-text">Sign In</span>
+                    <div class="loader hidden"></div>
+                </button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" class="auth-form" onsubmit="handleRegister(event)">
+                <h2>Create Account</h2>
+                <p class="subtitle">Join our secure platform today</p>
+                
+                <div class="input-group">
+                    <label for="reg-username">Username</label>
+                    <input type="text" id="reg-username" required placeholder="3-50 chars, letters/numbers">
+                </div>
+                
+                <div class="input-group">
+                    <label for="reg-email">Email Address</label>
+                    <input type="email" id="reg-email" required placeholder="you@example.com">
+                </div>
+                
+                <div class="input-group">
+                    <label for="reg-password">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="reg-password" required placeholder="Strong password (8+ chars)">
+                        <button type="button" class="toggle-password" onclick="togglePassword('reg-password')">Show</button>
+                    </div>
+                    <small class="password-hint">Must contain upper, lower, number, and special character.</small>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="reg-btn">
+                    <span class="btn-text">Register</span>
+                    <div class="loader hidden"></div>
+                </button>
+            </form>
+
+            <!-- Dashboard (Shown after login) -->
+            <div id="dashboard" class="auth-form">
+                <div class="success-icon">✓</div>
+                <h2>Authentication Successful</h2>
+                <p class="subtitle" id="welcome-message">Welcome to your dashboard!</p>
+                <div class="dashboard-card">
+                    <p>Your session is secure.</p>
+                    <p>Powered by Java HTTP Server & BCrypt.</p>
+                </div>
+                <button type="button" class="submit-btn logout-btn" onclick="logout()">Sign Out</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
