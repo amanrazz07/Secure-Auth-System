@@ -22,7 +22,7 @@ public class MainApp {
         try {
             HttpServer server = HttpServer.create(new InetSocketAddress(PORT), 0);
             
-            server.createContext("/", new StaticFileHandler("public"));
+            server.createContext("/", new StaticFileHandler("docs"));
             server.createContext("/api/login", new ApiHandler());
             server.createContext("/api/register", new ApiHandler());
             
